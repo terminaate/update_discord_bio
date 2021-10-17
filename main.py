@@ -35,8 +35,8 @@ def update_bio():
         status_time = now_time.strftime('%p').lower()
         if last_time != hours_time:
             if minuts_time == 00 or minuts_time == 10 or minuts_time == 20 or minuts_time == 30 or minuts_time == 40 or minuts_time == 50:
-                edit_bio(f"```Its01``` **{rand_url()}** ```01 and eErOR i s12ti4ll6 mi76ss12 you```")
-                sleep(10)
+                edit_bio(f"```[!] Error 404 : смысл жизни не найден```")
+                sleep(14)
                 for i in ['.', '..', '...']:
                     edit_bio(f"```Fix some errors{i}```")
                     sleep(1)
@@ -55,7 +55,8 @@ def get_guilds_ids() -> list:
     )
     r = json.loads(r.text)
     for i in r:
-        guilds_ids.append(i['id'])
+        if i['id'] != 891245704373227560:
+            guilds_ids.append(i['id'])
     return guilds_ids
 
 
@@ -70,7 +71,7 @@ def edit_guild_nick(guild_id, nick):
 
 def update_guild_nick():
     while True:
-        for i in get_guilds_ids():
+        for i in get_guilds_ids():     
             edit_guild_nick(i, rand_nick())
             sleep(3)
     
