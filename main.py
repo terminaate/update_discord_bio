@@ -20,9 +20,9 @@ def update_bio():
         status_time = now_time.strftime('%p').lower()
         if last_time != hours_time:
             if minuts_time == 00 or minuts_time == 10 or minuts_time == 20 or minuts_time == 30 or minuts_time == 40 or minuts_time == 50:
-                edit_bio(f"```[!] Error 404 : смысл жизни не найден```")
+                edit_bio(f"```[!] Error 404 : the meaning of life is not found```")
                 sleep(10)
-                edit_bio(f"```[!] Error 429 : я пытаюсь убежать от того, от чего убежать не возможно```")
+                edit_bio(f"```[!] Error 429 : I'm trying to escape from something that you can't escape from.```")
                 sleep(16)
                 for i in ['.', '..', '...']:
                     edit_bio(f"```Fix some errors{i}```")
